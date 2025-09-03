@@ -2,6 +2,7 @@ import { GuitarCard } from "@/components/guitar-card";
 import { PianoCard } from "@/components/piano-card";
 import { TvCard } from "@/components/tv-card";
 import { CarCard } from "@/components/car-card";
+import { DrumsCard } from "@/components/drums-card";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <TvCard />
         <PianoCard />
         <CarCard />
+        <DrumsCard />
         {/* Add more module cards here manually */}
       </div>
     </main>
