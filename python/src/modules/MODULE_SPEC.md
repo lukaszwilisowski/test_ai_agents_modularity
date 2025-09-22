@@ -8,7 +8,7 @@ The modular architecture allows for easy addition and removal of analysis capabi
 
 ## Module Structure
 
-Each module must be contained in its own folder under `modular_analysis/modules/` with the following required files:
+Each module must be contained in its own folder under `src/modules/` with the following required files:
 
 ```
 modules/
@@ -130,7 +130,7 @@ def analyze(dataset: pd.DataFrame, model: Any, config: Any) -> Dict[str, Any]:
 
 ## Module Registration
 
-Modules are automatically discovered by the framework. Simply create a folder with the required files under `modular_analysis/modules/` and the system will detect and run it.
+Modules are automatically discovered by the framework. Simply create a folder with the required files under `src/modules/` and the system will detect and run it.
 
 ## Error Handling
 
@@ -160,14 +160,14 @@ The following example modules demonstrate different types of analysis:
 
 ## Adding a New Module
 
-1. Create a new folder under `modular_analysis/modules/`
+1. Create a new folder under `src/modules/`
 2. Implement the three required files following the contracts above
 3. Test your module by running the main application
 4. The module will be automatically discovered and executed
 
 ## Removing a Module
 
-1. Delete the module folder from `modular_analysis/modules/`
+1. Delete the module folder from `src/modules/`
 2. The module will no longer be discovered or executed
 
 This modular architecture facilitates:

@@ -7,7 +7,7 @@ from typing import Any
 
 import pandas as pd
 
-from modular_analysis.core.module_registry import ModuleInfo
+from src.core.module_registry import ModuleInfo
 
 logger = logging.getLogger(__name__)
 

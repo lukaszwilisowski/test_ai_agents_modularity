@@ -4,9 +4,9 @@ import logging
 from pathlib import Path
 from typing import Any
 
-from modular_analysis.core.data_loader import DataLoader
-from modular_analysis.core.module_registry import ModuleRegistry
-from modular_analysis.core.module_runner import ModuleRunner
+from src.core.data_loader import DataLoader
+from src.core.module_registry import ModuleRegistry
+from src.core.module_runner import ModuleRunner
 
 # Configure logging
 logging.basicConfig(
@@ -23,7 +23,7 @@ def main() -> None:
         # Initialize components
         project_root = Path(__file__).parent.parent
         data_loader = DataLoader(project_root / "data")
-        module_registry = ModuleRegistry(project_root / "modular_analysis" / "modules")
+        module_registry = ModuleRegistry(project_root / "src" / "modules")
         module_runner = ModuleRunner()
 
         # Load sample data
