@@ -1,0 +1,258 @@
+{
+  "analysis_metadata": {
+    "timestamp": "2025-09-22T16:09:26.176276",
+    "dataset_records": 100,
+    "modules_executed": 3,
+    "modules_successful": 3,
+    "modules_failed": 0
+  },
+  "modules": {
+    "basic_stats": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "module": "basic_stats",
+        "description": "Calculates basic statistical measures for numerical columns",
+        "summary_stats": {
+          "value": {
+            "mean": 48.442,
+            "median": 48.096,
+            "std": 13.623,
+            "min": 10.704,
+            "max": 77.784,
+            "count": 100,
+            "q25": 40.986,
+            "q75": 56.089
+          },
+          "score": {
+            "mean": 48.022,
+            "median": 44.345,
+            "std": 28.674,
+            "min": 0.518,
+            "max": 99.455,
+            "count": 100,
+            "q25": 26.541,
+            "q75": 70.186
+          },
+          "count": {
+            "mean": 9.8,
+            "median": 10.0,
+            "std": 3.038,
+            "min": 2.0,
+            "max": 18.0,
+            "count": 100,
+            "q25": 7.0,
+            "q75": 12.0
+          }
+        },
+        "total_records": 100,
+        "clean_records": 100,
+        "columns_analyzed": [
+          "value",
+          "score",
+          "count"
+        ],
+        "module_name": "basic_stats",
+        "module_description": "Calculates basic statistical measures for numerical columns"
+      }
+    },
+    "correlation": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "module": "correlation",
+        "description": "Analyzes correlations between numerical variables",
+        "method": "pearson",
+        "correlation_matrix": {
+          "value": {
+            "value": 1.0,
+            "score": -0.072,
+            "count": -0.01
+          },
+          "score": {
+            "value": -0.072,
+            "score": 1.0,
+            "count": -0.079
+          },
+          "count": {
+            "value": -0.01,
+            "score": -0.079,
+            "count": 1.0
+          }
+        },
+        "significant_correlations": [],
+        "statistics": {
+          "average_correlation": 0.054,
+          "max_correlation": 0.079,
+          "total_pairs": 3,
+          "significant_pairs": 0
+        },
+        "total_records": 100,
+        "clean_records": 100,
+        "columns_analyzed": [
+          "value",
+          "score",
+          "count"
+        ],
+        "module_name": "correlation",
+        "module_description": "Analyzes correlations between numerical variables"
+      }
+    },
+    "outlier_detection": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "module": "outlier_detection",
+        "description": "Detects statistical outliers using IQR and Z-score methods",
+        "methods_used": [
+          "iqr",
+          "zscore"
+        ],
+        "parameters": {
+          "iqr_multiplier": 1.5,
+          "zscore_threshold": 2.5
+        },
+        "outliers_by_column": {
+          "value": {
+            "column": "value",
+            "methods": {
+              "iqr": {
+                "outlier_indices": [
+                  74
+                ],
+                "outlier_count": 1,
+                "bounds": {
+                  "lower_bound": 18.332116186074998,
+                  "upper_bound": 78.743579536675,
+                  "q1": 40.98641494255,
+                  "q3": 56.0892807802,
+                  "iqr": 15.10286583765
+                },
+                "outliers": [
+                  {
+                    "index": 74,
+                    "column": "value",
+                    "value": 10.7038234387,
+                    "id": 75
+                  }
+                ]
+              },
+              "zscore": {
+                "outlier_indices": [
+                  74
+                ],
+                "outlier_count": 1,
+                "statistics": {
+                  "mean": 48.442302239084,
+                  "std": 13.622526420110924,
+                  "threshold": 2.5
+                },
+                "outliers": [
+                  {
+                    "index": 74,
+                    "column": "value",
+                    "value": 10.7038234387,
+                    "id": 75
+                  }
+                ]
+              }
+            }
+          },
+          "score": {
+            "column": "score",
+            "methods": {
+              "iqr": {
+                "outlier_indices": [],
+                "outlier_count": 0,
+                "bounds": {
+                  "lower_bound": -38.9273164539125,
+                  "upper_bound": 135.6542950407875,
+                  "q1": 26.540787856599998,
+                  "q3": 70.186190730275,
+                  "iqr": 43.645402873675
+                },
+                "outliers": []
+              },
+              "zscore": {
+                "outlier_indices": [],
+                "outlier_count": 0,
+                "statistics": {
+                  "mean": 48.021934656958,
+                  "std": 28.67382518359021,
+                  "threshold": 2.5
+                },
+                "outliers": []
+              }
+            }
+          },
+          "count": {
+            "column": "count",
+            "methods": {
+              "iqr": {
+                "outlier_indices": [],
+                "outlier_count": 0,
+                "bounds": {
+                  "lower_bound": -0.5,
+                  "upper_bound": 19.5,
+                  "q1": 7.0,
+                  "q3": 12.0,
+                  "iqr": 5.0
+                },
+                "outliers": []
+              },
+              "zscore": {
+                "outlier_indices": [
+                  67,
+                  84
+                ],
+                "outlier_count": 2,
+                "statistics": {
+                  "mean": 9.8,
+                  "std": 3.0384738327527576,
+                  "threshold": 2.5
+                },
+                "outliers": [
+                  {
+                    "index": 67,
+                    "column": "count",
+                    "value": 18.0,
+                    "id": 68
+                  },
+                  {
+                    "index": 84,
+                    "column": "count",
+                    "value": 2.0,
+                    "id": 85
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "summary": {
+          "total_unique_outliers": 3,
+          "outlier_percentage": 3.0,
+          "method_summary": {
+            "iqr": {
+              "total_outliers": 1,
+              "percentage": 1.0
+            },
+            "zscore": {
+              "total_outliers": 3,
+              "percentage": 3.0
+            }
+          },
+          "columns_analyzed": [
+            "value",
+            "score",
+            "count"
+          ]
+        },
+        "total_records": 100,
+        "clean_records": 100,
+        "module_name": "outlier_detection",
+        "module_description": "Detects statistical outliers using IQR and Z-score methods"
+      }
+    }
+  }
+}
