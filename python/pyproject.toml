@@ -1,0 +1,70 @@
+[project]
+name = "modular-analysis"
+version = "0.1.0"
+description = "A modular command-line analysis tool showcasing module architecture"
+authors = [
+    {name = "Lukasz Wilisowski"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "black (>=25.9.0,<26.0.0)",
+    "ruff (>=0.13.1,<0.14.0)",
+    "pytest (>=8.4.2,<9.0.0)",
+    "pandas (>=2.3.2,<3.0.0)",
+    "numpy (>=2.3.3,<3.0.0)",
+    "scikit-learn (>=1.7.2,<2.0.0)",
+    "scipy (>=1.16.2,<2.0.0)"
+]
+
+
+[project.scripts]
+modular-analysis = "modular_analysis.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"__main__.py" = ["E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
