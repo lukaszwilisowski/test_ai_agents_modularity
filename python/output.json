@@ -1,9 +1,9 @@
 {
   "analysis_metadata": {
-    "timestamp": "2025-09-23T11:33:50.784069",
+    "timestamp": "2025-09-23T11:42:27.589581",
     "dataset_records": 100,
-    "modules_executed": 6,
-    "modules_successful": 6,
+    "modules_executed": 7,
+    "modules_successful": 7,
     "modules_failed": 0
   },
   "modules": {
@@ -306,6 +306,51 @@
           "overall_std": 27.3993
         },
         "module_name": "variance_claude",
+        "module_description": "Calculates variance and related statistical measures for datasets"
+      }
+    },
+    "variance_roo": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "variance": {
+          "id": {
+            "variance": 841.667,
+            "count": 100,
+            "mean": 50.5,
+            "std": 29.011
+          },
+          "value": {
+            "variance": 185.573,
+            "count": 100,
+            "mean": 48.442,
+            "std": 13.623
+          },
+          "score": {
+            "variance": 822.188,
+            "count": 100,
+            "mean": 48.022,
+            "std": 28.674
+          },
+          "count": {
+            "variance": 9.232,
+            "count": 100,
+            "mean": 9.8,
+            "std": 3.038
+          }
+        },
+        "summary": {
+          "total_columns": 4,
+          "ddof": 1,
+          "precision": 3
+        },
+        "overall": {
+          "overall_variance": 750.719,
+          "overall_count": 400,
+          "overall_mean": 39.191,
+          "overall_std": 27.399
+        },
+        "module_name": "variance_roo",
         "module_description": "Calculates variance and related statistical measures for datasets"
       }
     },
