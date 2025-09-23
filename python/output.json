@@ -1,9 +1,9 @@
 {
   "analysis_metadata": {
-    "timestamp": "2025-09-23T11:42:27.589581",
+    "timestamp": "2025-09-23T11:45:25.481370",
     "dataset_records": 100,
-    "modules_executed": 7,
-    "modules_successful": 7,
+    "modules_executed": 8,
+    "modules_successful": 8,
     "modules_failed": 0
   },
   "modules": {
@@ -306,6 +306,57 @@
           "overall_std": 27.3993
         },
         "module_name": "variance_claude",
+        "module_description": "Calculates variance and related statistical measures for datasets"
+      }
+    },
+    "variance_cline": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "variance": {
+          "id": {
+            "variance": 841.6667,
+            "count": 100,
+            "mean": 50.5,
+            "std": 29.0115,
+            "coefficient_of_variation": 0.5745
+          },
+          "value": {
+            "variance": 185.5732,
+            "count": 100,
+            "mean": 48.4423,
+            "std": 13.6225,
+            "coefficient_of_variation": 0.2812
+          },
+          "score": {
+            "variance": 822.1883,
+            "count": 100,
+            "mean": 48.0219,
+            "std": 28.6738,
+            "coefficient_of_variation": 0.5971
+          },
+          "count": {
+            "variance": 9.2323,
+            "count": 100,
+            "mean": 9.8,
+            "std": 3.0385,
+            "coefficient_of_variation": 0.31
+          }
+        },
+        "summary": {
+          "total_columns": 4,
+          "ddof": 1,
+          "precision": 4,
+          "module_author": "Cline"
+        },
+        "overall": {
+          "overall_variance": 750.7194,
+          "overall_count": 400,
+          "overall_mean": 39.1911,
+          "overall_std": 27.3993,
+          "overall_coefficient_of_variation": 0.6991
+        },
+        "module_name": "variance_cline",
         "module_description": "Calculates variance and related statistical measures for datasets"
       }
     },
