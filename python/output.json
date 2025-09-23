@@ -1,6 +1,6 @@
 {
   "analysis_metadata": {
-    "timestamp": "2025-09-23T11:31:39.853224",
+    "timestamp": "2025-09-23T11:33:50.784069",
     "dataset_records": 100,
     "modules_executed": 6,
     "modules_successful": 6,
@@ -29,4 +29,441 @@
             "sample_std": 29.0115,
             "population_variance": 833.25,
             "population_std": 28.8661,
-            "min": 
+            "min": 1,
+            "max": 100,
+            "range": 99
+          },
+          "value": {
+            "count": 100,
+            "mean": 48.4423,
+            "sample_variance": 185.5732,
+            "sample_std": 13.6225,
+            "population_variance": 183.7175,
+            "population_std": 13.5542,
+            "min": 10.7038,
+            "max": 77.7842,
+            "range": 67.0803
+          },
+          "score": {
+            "count": 100,
+            "mean": 48.0219,
+            "sample_variance": 822.1883,
+            "sample_std": 28.6738,
+            "population_variance": 813.9664,
+            "population_std": 28.5301,
+            "min": 0.5185,
+            "max": 99.4551,
+            "range": 98.9366
+          },
+          "count": {
+            "count": 100,
+            "mean": 9.8,
+            "sample_variance": 9.2323,
+            "sample_std": 3.0385,
+            "population_variance": 9.14,
+            "population_std": 3.0232,
+            "min": 2,
+            "max": 18,
+            "range": 16
+          }
+        },
+        "parameters_used": {
+          "precision": 4,
+          "include_sample_variance": true,
+          "include_population_variance": true,
+          "ddof": 1
+        },
+        "summary": {
+          "avg_sample_variance": 464.665125,
+          "avg_population_variance": 460.018475,
+          "total_valid_columns": 4
+        },
+        "module_name": "variance_cursor",
+        "module_description": "Calculates variance and related statistical measures for numerical data"
+      }
+    },
+    "variance_copilot": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "module": "variance_copilot",
+        "description": "Computes variance and related statistical measures for numerical data",
+        "version": "1.0.0",
+        "author": "GitHub Copilot",
+        "columns_analyzed": [
+          "value",
+          "score",
+          "count"
+        ],
+        "total_columns": 3,
+        "valid_variance_columns": 3,
+        "variance_results": {
+          "value": {
+            "count": 100,
+            "mean": 48.4423,
+            "min": 10.7038,
+            "max": 77.7842,
+            "range": 67.0803,
+            "sample_variance": 185.5732,
+            "sample_std": 13.6225,
+            "coefficient_of_variation": 28.1211,
+            "population_variance": 183.7175,
+            "population_std": 13.5542,
+            "interpretation": "moderate variability",
+            "median": 48.0957,
+            "q25": 40.9864,
+            "q75": 56.0893,
+            "iqr": 15.1029
+          },
+          "score": {
+            "count": 100,
+            "mean": 48.0219,
+            "min": 0.5185,
+            "max": 99.4551,
+            "range": 98.9366,
+            "sample_variance": 822.1883,
+            "sample_std": 28.6738,
+            "coefficient_of_variation": 59.7099,
+            "population_variance": 813.9664,
+            "population_std": 28.5301,
+            "interpretation": "very high variability",
+            "median": 44.3449,
+            "q25": 26.5408,
+            "q75": 70.1862,
+            "iqr": 43.6454
+          },
+          "count": {
+            "count": 100,
+            "mean": 9.8,
+            "min": 2,
+            "max": 18,
+            "range": 16,
+            "sample_variance": 9.2323,
+            "sample_std": 3.0385,
+            "coefficient_of_variation": 31.0048,
+            "population_variance": 9.14,
+            "population_std": 3.0232,
+            "interpretation": "high variability",
+            "median": 10.0,
+            "q25": 7.0,
+            "q75": 12.0,
+            "iqr": 5.0
+          }
+        },
+        "dataset_summary": {
+          "original_rows": 100,
+          "clean_rows": 100,
+          "original_columns": 7,
+          "numerical_columns": 3
+        },
+        "parameters_used": {
+          "precision": 4,
+          "include_sample_variance": true,
+          "include_population_variance": true,
+          "include_standard_deviation": true,
+          "include_coefficient_variation": true,
+          "ddof": 1,
+          "columns_filter": [
+            "value",
+            "score",
+            "count"
+          ]
+        },
+        "module_name": "variance_copilot",
+        "module_description": "Computes variance and related statistical measures for numerical data"
+      }
+    },
+    "basic_stats": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "module": "basic_stats",
+        "description": "Calculates basic statistical measures for numerical columns",
+        "summary_stats": {
+          "value": {
+            "mean": 48.442,
+            "median": 48.096,
+            "std": 13.623,
+            "min": 10.704,
+            "max": 77.784,
+            "count": 100,
+            "q25": 40.986,
+            "q75": 56.089
+          },
+          "score": {
+            "mean": 48.022,
+            "median": 44.345,
+            "std": 28.674,
+            "min": 0.518,
+            "max": 99.455,
+            "count": 100,
+            "q25": 26.541,
+            "q75": 70.186
+          },
+          "count": {
+            "mean": 9.8,
+            "median": 10.0,
+            "std": 3.038,
+            "min": 2.0,
+            "max": 18.0,
+            "count": 100,
+            "q25": 7.0,
+            "q75": 12.0
+          }
+        },
+        "total_records": 100,
+        "clean_records": 100,
+        "columns_analyzed": [
+          "value",
+          "score",
+          "count"
+        ],
+        "module_name": "basic_stats",
+        "module_description": "Calculates basic statistical measures for numerical columns"
+      }
+    },
+    "correlation": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "module": "correlation",
+        "description": "Analyzes correlations between numerical variables",
+        "method": "pearson",
+        "correlation_matrix": {
+          "value": {
+            "value": 1.0,
+            "score": -0.072,
+            "count": -0.01
+          },
+          "score": {
+            "value": -0.072,
+            "score": 1.0,
+            "count": -0.079
+          },
+          "count": {
+            "value": -0.01,
+            "score": -0.079,
+            "count": 1.0
+          }
+        },
+        "significant_correlations": [],
+        "statistics": {
+          "average_correlation": 0.054,
+          "max_correlation": 0.079,
+          "total_pairs": 3,
+          "significant_pairs": 0
+        },
+        "total_records": 100,
+        "clean_records": 100,
+        "columns_analyzed": [
+          "value",
+          "score",
+          "count"
+        ],
+        "module_name": "correlation",
+        "module_description": "Analyzes correlations between numerical variables"
+      }
+    },
+    "variance_claude": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "variance": {
+          "id": {
+            "variance": 841.6667,
+            "count": 100,
+            "mean": 50.5,
+            "std": 29.0115
+          },
+          "value": {
+            "variance": 185.5732,
+            "count": 100,
+            "mean": 48.4423,
+            "std": 13.6225
+          },
+          "score": {
+            "variance": 822.1883,
+            "count": 100,
+            "mean": 48.0219,
+            "std": 28.6738
+          },
+          "count": {
+            "variance": 9.2323,
+            "count": 100,
+            "mean": 9.8,
+            "std": 3.0385
+          }
+        },
+        "summary": {
+          "total_columns": 4,
+          "ddof": 1,
+          "precision": 4
+        },
+        "overall": {
+          "overall_variance": 750.7194,
+          "overall_count": 400,
+          "overall_mean": 39.1911,
+          "overall_std": 27.3993
+        },
+        "module_name": "variance_claude",
+        "module_description": "Calculates variance and related statistical measures for datasets"
+      }
+    },
+    "outlier_detection": {
+      "status": "SUCCESS",
+      "error": null,
+      "result": {
+        "module": "outlier_detection",
+        "description": "Detects statistical outliers using IQR and Z-score methods",
+        "methods_used": [
+          "iqr",
+          "zscore"
+        ],
+        "parameters": {
+          "iqr_multiplier": 1.5,
+          "zscore_threshold": 2.5
+        },
+        "outliers_by_column": {
+          "value": {
+            "column": "value",
+            "methods": {
+              "iqr": {
+                "outlier_indices": [
+                  74
+                ],
+                "outlier_count": 1,
+                "bounds": {
+                  "lower_bound": 18.332116186074998,
+                  "upper_bound": 78.743579536675,
+                  "q1": 40.98641494255,
+                  "q3": 56.0892807802,
+                  "iqr": 15.10286583765
+                },
+                "outliers": [
+                  {
+                    "index": 74,
+                    "column": "value",
+                    "value": 10.7038234387,
+                    "id": 75
+                  }
+                ]
+              },
+              "zscore": {
+                "outlier_indices": [
+                  74
+                ],
+                "outlier_count": 1,
+                "statistics": {
+                  "mean": 48.442302239084,
+                  "std": 13.622526420110924,
+                  "threshold": 2.5
+                },
+                "outliers": [
+                  {
+                    "index": 74,
+                    "column": "value",
+                    "value": 10.7038234387,
+                    "id": 75
+                  }
+                ]
+              }
+            }
+          },
+          "score": {
+            "column": "score",
+            "methods": {
+              "iqr": {
+                "outlier_indices": [],
+                "outlier_count": 0,
+                "bounds": {
+                  "lower_bound": -38.9273164539125,
+                  "upper_bound": 135.6542950407875,
+                  "q1": 26.540787856599998,
+                  "q3": 70.186190730275,
+                  "iqr": 43.645402873675
+                },
+                "outliers": []
+              },
+              "zscore": {
+                "outlier_indices": [],
+                "outlier_count": 0,
+                "statistics": {
+                  "mean": 48.021934656958,
+                  "std": 28.67382518359021,
+                  "threshold": 2.5
+                },
+                "outliers": []
+              }
+            }
+          },
+          "count": {
+            "column": "count",
+            "methods": {
+              "iqr": {
+                "outlier_indices": [],
+                "outlier_count": 0,
+                "bounds": {
+                  "lower_bound": -0.5,
+                  "upper_bound": 19.5,
+                  "q1": 7.0,
+                  "q3": 12.0,
+                  "iqr": 5.0
+                },
+                "outliers": []
+              },
+              "zscore": {
+                "outlier_indices": [
+                  67,
+                  84
+                ],
+                "outlier_count": 2,
+                "statistics": {
+                  "mean": 9.8,
+                  "std": 3.0384738327527576,
+                  "threshold": 2.5
+                },
+                "outliers": [
+                  {
+                    "index": 67,
+                    "column": "count",
+                    "value": 18.0,
+                    "id": 68
+                  },
+                  {
+                    "index": 84,
+                    "column": "count",
+                    "value": 2.0,
+                    "id": 85
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "summary": {
+          "total_unique_outliers": 3,
+          "outlier_percentage": 3.0,
+          "method_summary": {
+            "iqr": {
+              "total_outliers": 1,
+              "percentage": 1.0
+            },
+            "zscore": {
+              "total_outliers": 3,
+              "percentage": 3.0
+            }
+          },
+          "columns_analyzed": [
+            "value",
+            "score",
+            "count"
+          ]
+        },
+        "total_records": 100,
+        "clean_records": 100,
+        "module_name": "outlier_detection",
+        "module_description": "Detects statistical outliers using IQR and Z-score methods"
+      }
+    }
+  }
+}

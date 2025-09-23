@@ -5,6 +5,7 @@ import logging
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+import numpy as np
 
 from src.core.data_loader import DataLoader
 from src.core.module_registry import ModuleRegistry
@@ -15,6 +16,19 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
+
+
+class NumpyJSONEncoder(json.JSONEncoder):
+    """Custom JSON encoder that handles NumPy data types."""
+    
+    def default(self, obj):
+        if isinstance(obj, (np.integer, np.int64)):
+            return int(obj)
+        elif isinstance(obj, (np.floating, np.float64)):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super().default(obj)
 
 
 def save_results_to_json(results: dict[str, Any], dataset_info: dict[str, Any], output_path: Path) -> None:
@@ -49,7 +63,7 @@ def save_results_to_json(results: dict[str, Any], dataset_info: dict[str, Any], 
     # Write to JSON file
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(output_data, f, indent=2, ensure_ascii=False)
+            json.dump(output_data, f, indent=2, ensure_ascii=False, cls=NumpyJSONEncoder)
         logger.info(f"Results saved to {output_path}")
     except Exception as e:
         logger.error(f"Failed to save results to JSON: {e}")
