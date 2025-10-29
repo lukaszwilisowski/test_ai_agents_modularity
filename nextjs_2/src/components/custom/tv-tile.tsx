@@ -51,7 +51,7 @@ export function TVTile({ tv }: TVTileProps) {
         <p className="text-gray-600 text-sm line-clamp-2">{tv.description}</p>
 
         <Link
-          href={`/tvs/${tv._id}`}
+          href={`/tvs/${tv._id}` as any}
           className="block w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center mt-3"
         >
           View Details

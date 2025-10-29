@@ -78,6 +78,23 @@ export default function Home() {
             Shop Computers
           </Link>
         </div>
+
+        {/* Toys Module Card */}
+        <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border">
+          <div className="aspect-video bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+            <div className="text-4xl">🧸</div>
+          </div>
+          <h2 className="text-xl font-semibold mb-2">Toys</h2>
+          <p className="text-gray-600 mb-4">
+            Fun and educational toys for children of all ages
+          </p>
+          <Link
+            href="/toys"
+            className="block w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors text-center"
+          >
+            Shop Toys
+          </Link>
+        </div>
       </div>
     </main>
   );

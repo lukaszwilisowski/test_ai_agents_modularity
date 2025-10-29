@@ -7,7 +7,8 @@
       "Read(/D:\\Development\\WCA\\test_ai_agents_modularity\\nextjs_2\\src\\app\\guitars/**)",
       "Read(/D:\\Development\\WCA\\test_ai_agents_modularity\\nextjs_2\\src\\models\\schemas/**)",
       "Read(/D:\\Development\\WCA\\test_ai_agents_modularity\\nextjs_2\\src\\app\\api\\guitars/**)",
-      "Read(/D:\\Development\\WCA\\test_ai_agents_modularity\\nextjs_2\\src\\models\\schemas/**)"
+      "Read(/D:\\Development\\WCA\\test_ai_agents_modularity\\nextjs_2\\src\\models\\schemas/**)",
+      "Bash(npm run build)"
     ],
     "deny": [],
     "ask": []
